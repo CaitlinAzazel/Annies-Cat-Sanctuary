@@ -1,0 +1,10 @@
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caitl\Desktop\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json

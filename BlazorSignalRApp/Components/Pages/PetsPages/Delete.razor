@@ -1,0 +1,99 @@
+﻿@page "/pets/delete"
+@using Microsoft.EntityFrameworkCore
+@using BlazorSignalRApp.Models
+@inject IDbContextFactory<BlazorSignalRApp.Data.BlazorSignalRAppContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Delete</PageTitle>
+
+<h1>Delete</h1>
+
+<p>Are you sure you want to delete this?</p>
+<div>
+    <h2>Pets</h2>
+    <hr />
+    @if (pets is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@pets.Name</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">BirthDate</dt>
+            <dd class="col-sm-10">@pets.BirthDate</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">HealthStatus</dt>
+            <dd class="col-sm-10">@pets.HealthStatus</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Breed</dt>
+            <dd class="col-sm-10">@pets.Breed</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Age</dt>
+            <dd class="col-sm-10">@pets.Age</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Sex</dt>
+            <dd class="col-sm-10">@pets.Sex</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Vaccinated</dt>
+            <dd class="col-sm-10">@pets.Vaccinated</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">TemperamentWCats</dt>
+            <dd class="col-sm-10">@pets.TemperamentWCats</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">TemperamentWDogs</dt>
+            <dd class="col-sm-10">@pets.TemperamentWDogs</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">TemperamentWChildren</dt>
+            <dd class="col-sm-10">@pets.TemperamentWChildren</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Description</dt>
+            <dd class="col-sm-10">@pets.Description</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Price</dt>
+            <dd class="col-sm-10">@pets.Price</dd>
+        </dl>
+        <EditForm method="post" Model="pets" OnValidSubmit="DeletePets" FormName="delete" Enhance>
+            <button type="submit" class="btn btn-danger" disabled="@(pets is null)">Delete</button> |
+            <a href="/pets">Back to List</a>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private Pets? pets;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        pets = await context.Pets.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (pets is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task DeletePets()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Pets.Remove(pets!);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/pets");
+    }
+}
