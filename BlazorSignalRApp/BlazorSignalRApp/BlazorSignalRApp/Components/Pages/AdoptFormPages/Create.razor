@@ -1,0 +1,128 @@
+﻿@page "/adoptforms/create"
+@using Microsoft.EntityFrameworkCore
+@using BlazorSignalRApp.Models
+@using System.Security.Claims
+@inject IDbContextFactory<BlazorSignalRApp.Data.BlazorSignalRAppContext> DbFactory
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>Create Adoption Form</PageTitle>
+
+<h1>Adoption Form</h1>
+<h2>To adopt, you must be at least 18 years old and have a suitable living arrangement.</h2>
+<hr />
+<div>
+    @if (pet == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <h3>Adopt @pet.Name</h3>
+        <p>Breed: @pet.Breed</p>
+        <p>Date of birth: @pet.BirthDate</p>
+    }
+
+    <div class="col-md-4">
+        <EditForm Model="AdoptForm" OnValidSubmit="AddAdoptForm" FormName="create" Enhance>
+            <ValidationSummary class="text-danger" role="alert" />
+            <div class="mb-3">
+                <label for="fullname" class="form-label">Full Name:</label>
+                <InputText id="fullname" @bind-Value="AdoptForm.FullName" class="form-control" aria-required="true" />
+                <ValidationMessage For="() => AdoptForm.FullName" class="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <label for="phonenumber" class="form-label">Phone Number:</label>
+                <InputText id="phonenumber" @bind-Value="AdoptForm.PhoneNumber" class="form-control" aria-required="true" />
+                <ValidationMessage For="() => AdoptForm.PhoneNumber" class="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <label for="dateofbirth" class="form-label">Date of Birth:</label>
+                <InputDate id="dateofbirth" @bind-Value="AdoptForm.DateOfBirth" class="form-control" aria-required="true" />
+                <ValidationMessage For="() => AdoptForm.DateOfBirth" class="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Address:</label>
+                <InputText id="address" @bind-Value="AdoptForm.Address" class="form-control" aria-required="true" />
+                <ValidationMessage For="() => AdoptForm.Address" class="text-danger" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+<div>
+    <a href="/adoptforms">Back to List</a>
+</div>
+
+@code {
+    private AdoptForm AdoptForm { get; set; } = new();
+    private Pet? pet;
+    private int PetId { get; set; }
+    private string? currentUserId;
+    private string? currentUserEmail;
+
+    // This method runs when the page is initialized
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve the current user's ID from the claims collection
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        currentUserId = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+        currentUserEmail = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+
+        // Automatically set the UserId in the form model
+        if (!string.IsNullOrEmpty(currentUserId))
+        {
+            AdoptForm.UserId = currentUserId;
+        }
+
+        // Fetch PetId from the query string
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        var queryParams = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+        if (queryParams.ContainsKey("petId"))
+        {
+            PetId = int.Parse(queryParams["petId"]);
+        }
+
+        // Retrieve pet details using the PetId from the query string
+        using var context = DbFactory.CreateDbContext();
+        pet = await context.Pet.FirstOrDefaultAsync(p => p.Id == PetId);
+
+        if (pet is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+
+        // Optionally, pre-fill the form with the pet's details
+        AdoptForm.PetName = pet.Name;
+        AdoptForm.PetBreed = pet.Breed;
+        AdoptForm.PetBirthDate = pet.BirthDate; // Pre-filling this field is optional
+    }
+
+    private async Task AddAdoptForm()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        // Populate AdoptForm with required fields
+        AdoptForm.PetId = PetId;
+        AdoptForm.PetName = pet.Name;
+        AdoptForm.PetBirthDate = pet.BirthDate;
+        AdoptForm.Status = "Pending";
+        AdoptForm.ApplicationDate = DateTime.UtcNow;
+        AdoptForm.Email = currentUserEmail;
+        AdoptForm.UserId = currentUserId;
+        Console.WriteLine("HEEEEEEEEEEEEERRRRRRRRRRRRR"+AdoptForm.Address);
+        // Add the form to the context and save
+        context.AdoptForm.Add(AdoptForm);
+        await context.SaveChangesAsync();
+
+        // Navigate to the list page after saving
+        NavigationManager.NavigateTo("/adoptforms");
+    }
+}

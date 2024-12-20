@@ -1,0 +1,68 @@
+﻿@page "/adoptforms/details"
+@using Microsoft.EntityFrameworkCore
+@using BlazorSignalRApp.Models
+@inject IDbContextFactory<BlazorSignalRApp.Data.BlazorSignalRAppContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h2>AdoptForm</h2>
+    <hr />
+    @if (adoptform is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">PetId</dt>
+            <dd class="col-sm-10">@adoptform.PetId</dd>
+            <dt class="col-sm-2">PetName</dt>
+            <dd class="col-sm-10">@adoptform.PetName</dd>
+            <dt class="col-sm-2">PetBreed</dt>
+            <dd class="col-sm-10">@adoptform.PetBreed</dd>
+            <dt class="col-sm-2">PetBirthDate</dt>
+            <dd class="col-sm-10">@adoptform.PetBirthDate</dd>
+            <dt class="col-sm-2">FullName</dt>
+            <dd class="col-sm-10">@adoptform.FullName</dd>
+            <dt class="col-sm-2">Email</dt>
+            <dd class="col-sm-10">@adoptform.Email</dd>
+            <dt class="col-sm-2">PhoneNumber</dt>
+            <dd class="col-sm-10">@adoptform.PhoneNumber</dd>
+            <dt class="col-sm-2">DateOfBirth</dt>
+            <dd class="col-sm-10">@adoptform.DateOfBirth</dd>
+            <dt class="col-sm-2">Address</dt>
+            <dd class="col-sm-10">@adoptform.Address</dd>
+            <dt class="col-sm-2">Status</dt>
+            <dd class="col-sm-10">@adoptform.Status</dd>
+            <dt class="col-sm-2">ApplicationDate</dt>
+            <dd class="col-sm-10">@adoptform.ApplicationDate</dd>
+            <dt class="col-sm-2">UserId</dt>
+            <dd class="col-sm-10">@adoptform.UserId</dd>
+        </dl>
+        <div>
+            <a href="@($"/adoptforms/edit?id={adoptform.Id}")">Edit</a> |
+            <a href="@($"/adoptforms")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    private AdoptForm? adoptform;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        adoptform = await context.AdoptForm.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (adoptform is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

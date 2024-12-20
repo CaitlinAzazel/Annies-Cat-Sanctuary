@@ -1,0 +1,47 @@
+﻿@page "/adoptforms"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using BlazorSignalRApp.Models
+@using BlazorSignalRApp.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorSignalRApp.Data.BlazorSignalRAppContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="adoptforms/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.AdoptForm">
+    <PropertyColumn Property="adoptform => adoptform.PetId" />
+    <PropertyColumn Property="adoptform => adoptform.PetName" />
+    <PropertyColumn Property="adoptform => adoptform.PetBreed" />
+    <PropertyColumn Property="adoptform => adoptform.PetBirthDate" />
+    <PropertyColumn Property="adoptform => adoptform.FullName" />
+    <PropertyColumn Property="adoptform => adoptform.Email" />
+    <PropertyColumn Property="adoptform => adoptform.PhoneNumber" />
+    <PropertyColumn Property="adoptform => adoptform.DateOfBirth" />
+    <PropertyColumn Property="adoptform => adoptform.Address" />
+    <PropertyColumn Property="adoptform => adoptform.Status" />
+    <PropertyColumn Property="adoptform => adoptform.ApplicationDate" />
+    <PropertyColumn Property="adoptform => adoptform.UserId" />
+
+    <TemplateColumn Context="adoptform">
+        <a href="@($"adoptforms/edit?id={adoptform.Id}")">Edit</a> |
+        <a href="@($"adoptforms/details?id={adoptform.Id}")">Details</a> |
+        <a href="@($"adoptforms/delete?id={adoptform.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private BlazorSignalRAppContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}
