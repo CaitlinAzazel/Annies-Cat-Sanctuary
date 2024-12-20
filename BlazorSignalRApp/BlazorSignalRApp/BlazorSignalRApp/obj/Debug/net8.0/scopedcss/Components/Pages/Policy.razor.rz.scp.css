@@ -1,0 +1,21 @@
+
+
+h3[b-fdydpec37k] {
+    font-size: 18px;
+}
+
+.divider[b-fdydpec37k] {
+    margin-top: 10px;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #6A1B9A;
+    height: 50px;
+}
+
+    .divider h1[b-fdydpec37k] {
+        color: white;
+        text-align: left;
+        margin-left: 50px;
+    }

@@ -243,6 +243,28 @@ h3[b-d2etdygjiq] {
         text-align: left;
         margin-left: 50px;
     }
+/* _content/BlazorSignalRApp/Components/Pages/FAQ.razor.rz.scp.css */
+
+
+h3[b-nn5s8pl61j] {
+    font-size: 18px;
+}
+
+.divider[b-nn5s8pl61j] {
+    margin-top: 10px;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #6A1B9A;
+    height: 50px;
+}
+
+    .divider h1[b-nn5s8pl61j] {
+        color: white;
+        text-align: left;
+        margin-left: 50px;
+    }
 /* _content/BlazorSignalRApp/Components/Pages/Home.razor.rz.scp.css */
 div.scroll-container[b-lb7ylbmi2c] {
     background-color: #333;
@@ -308,6 +330,28 @@ h1[b-lb7ylbmi2c] {
 }
 
     .divider h1[b-lb7ylbmi2c] {
+        color: white;
+        text-align: left;
+        margin-left: 50px;
+    }
+/* _content/BlazorSignalRApp/Components/Pages/Policy.razor.rz.scp.css */
+
+
+h3[b-fdydpec37k] {
+    font-size: 18px;
+}
+
+.divider[b-fdydpec37k] {
+    margin-top: 10px;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #6A1B9A;
+    height: 50px;
+}
+
+    .divider h1[b-fdydpec37k] {
         color: white;
         text-align: left;
         margin-left: 50px;
