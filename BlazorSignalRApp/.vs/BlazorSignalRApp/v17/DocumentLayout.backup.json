@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Caden\\OneDrive\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|c:\\users\\orivi\\documents\\github\\annies-cat-sanctuary\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\pages\\adoptformpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\pages\\adoptformpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|c:\\users\\orivi\\documents\\github\\annies-cat-sanctuary\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\models\\adoptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\models\\adoptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|c:\\users\\orivi\\documents\\github\\annies-cat-sanctuary\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\pages\\petpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\pages\\petpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|c:\\users\\orivi\\documents\\github\\annies-cat-sanctuary\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\pages\\petpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\pages\\petpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|c:\\users\\caden\\onedrive\\documents\\github\\annies-cat-sanctuary\\blazorsignalrapp\\blazorsignalrapp\\blazorsignalrapp\\components\\pages\\petpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E6BDB322-AE69-457D-9648-F222CEA54E88}|BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp.csproj|solutionrelative:blazorsignalrapp\\blazorsignalrapp\\components\\pages\\petpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,68 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Create.razor",
-              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Create.razor",
-              "ToolTip": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Create.razor",
-              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Create.razor",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE0AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-20T18:46:34.638Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\AdoptFormPages\\Create.razor",
-              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\AdoptFormPages\\Create.razor",
-              "ToolTip": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\AdoptFormPages\\Create.razor",
-              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\AdoptFormPages\\Create.razor",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHcAAAA4AAAAAAAAAA==",
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Caden\\OneDrive\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Caden\\OneDrive\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Index.razor",
+              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Index.razor",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAEIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-20T17:57:49.765Z",
+              "WhenOpened": "2024-12-21T03:45:21.467Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdoptForm.cs",
-              "DocumentMoniker": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Models\\AdoptForm.cs",
-              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Models\\AdoptForm.cs",
-              "ToolTip": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Models\\AdoptForm.cs",
-              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Models\\AdoptForm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAzwBUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T16:24:01.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.razor",
-              "DocumentMoniker": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Details.razor",
-              "RelativeDocumentMoniker": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Details.razor",
-              "ToolTip": "C:\\Users\\orivi\\Documents\\GitHub\\Annies-Cat-Sanctuary\\BlazorSignalRApp\\BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Details.razor",
-              "RelativeToolTip": "BlazorSignalRApp\\BlazorSignalRApp\\Components\\Pages\\PetPages\\Details.razor",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-20T16:05:12.784Z"
             }
           ]
         }

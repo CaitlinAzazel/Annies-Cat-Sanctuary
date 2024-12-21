@@ -10,6 +10,18 @@
 
 <h1>Index</h1>
 
+<div>
+    <form action="/pets" data-enhance>
+        <label for="nameFilter">Name:</label>
+        <input type="search" id="nameFilter" name="nameFilter" />
+
+        <label for="breedFilter">Breed:</label>
+        <input type="search" id="breedFilter" name="breedFilter" />
+
+        <input type="submit" value="Search" />
+    </form>
+</div>
+
 <p>
     <a href="pets/create">Create New</a>
 </p>
@@ -44,4 +56,17 @@
     }
 
     public async ValueTask DisposeAsync() => await context.DisposeAsync();
+    
+    [SupplyParameterFromQuery]
+    private string? NameFilter { get; set; }
+
+    [SupplyParameterFromQuery]
+    private string? BreedFilter { get; set; }
+
+    private IQueryable<Pet> FilteredPets =>
+        context.Pet.Where(pets =>
+            (string.IsNullOrEmpty(NameFilter) || pets.Name!.Contains(NameFilter)) &&
+            (string.IsNullOrEmpty(BreedFilter) || pets.Breed!.Contains(BreedFilter))
+        );
+
 }

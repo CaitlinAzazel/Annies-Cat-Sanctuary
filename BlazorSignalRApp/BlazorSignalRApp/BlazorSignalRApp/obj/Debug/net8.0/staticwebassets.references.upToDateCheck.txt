@@ -63,3 +63,5 @@ C:\Users\orivi\source\repos\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.C
 C:\Users\orivi\source\repos\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\orivi\source\repos\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\orivi\Documents\GitHub\Annies-Cat-Sanctuary\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caden\OneDrive\Documents\GitHub\Annies-Cat-Sanctuary\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Caden\OneDrive\Documents\GitHub\Annies-Cat-Sanctuary\BlazorSignalRApp\BlazorSignalRApp\BlazorSignalRApp.Client\obj\Debug\net8.0\staticwebassets.build.json
